@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dating Website</title>
+    <style>
+        .dome{
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+        .legend{
+            padding-left: 10px;
+            border: 10px;
+            margin-left: -90px;
+        }
+        fieldset {
+            background-color: #fdfee5;
+            border-color: #f9fd00;
+            border-width:15px;
+            border-style: solid;
+            padding-left: 100px;
+            /*margin-left: 100px;*/
+            /*margin-right: 100px;*/
+            /*border-bottom: 10px;*/
+
+        }
+        hr{
+            /*border-style: solid;*/
+            /*height:0.1px;*/
+            /*border:solid;*/
+        }
+
+        legend {
+            /*background-color: gray;*/
+            /*color: white;*/
+            padding: 5px 10px;
+            border: 10px;
+
+        }
+        label{
+            cursor: pointer;
+            display: inline-block;
+            /*padding: 3px 6px;*/
+            text-align: right;
+            width: 150px;
+            vertical-align: top;
+        }
+
+
+        input {
+            /*margin: 5px;*/
+        }
+        .front{
+            background: #dc000e;
+            cursor: pointer;
+            display: inline-block;
+            padding: 3px 6px;
+            text-align: center;
+            width: 70px;
+            vertical-align: top;
+            color: aliceblue;
+        }
+        .end{
+            background: #8e00ff;
+            cursor: pointer;
+            display: inline-block;
+            padding: 3px 6px;
+            text-align: center;
+            width: 70px;
+            vertical-align: center;
+            color: aliceblue;
+        }
+        /*.submit{*/
+        /*    margin-left: 100px;*/
+        /*    margin-right: 100px;*/
+        /*}*/
+        textarea {
+            vertical-align: top;
+            /*margin: 5px;*/
+        }
+
+    </style>
+</head>
+<body>
+<div class="dome">
+<h1>
+    Please Enter Your Details For Our Dating Website!
+</h1>
+<fieldset>
+    <legend class="legend">Your Face</legend>
+    <label for="uploadImage">Your image:</label>
+    <input type="file" id='uploadImage'accept="image/*"><br>
+    <label for="img">Image preview:</label><img src="" id="img">
+</fieldset>
+<br>
+<fieldset>
+    <legend class="legend">Your General Details</legend>
+    <label for="name" >Name:</label>
+    <input type="text" id="name" placeholder="Your full name" name="name"><br>
+    <label for="genderm">Gender:</label>
+    <input type="radio" id="genderm" value="Male">Male
+    <input type="radio" id="genderf" value="Male">Female<br>
+    <label for="age">Age:</label>
+    <input type="email" id="age" name="email" value="18"><br>
+    <label for="birthday">Date of birth:</label>
+    <input type="date" id="birthday" name="birthday"><br>
+    <label for="color">Favorite color:</label>
+    <input type="color" id="color" value="010103"/><br>
+    <label for="country">Which Country:</label>
+        <select id="country">
+            <option value="blank"></option>
+            <option value="US">United States</option>
+            <option value="china">China</option>
+            <option value="india">India</option>
+        </select><br>
+</fieldset>
+<br>
+<fieldset>
+    <legend class="legend">Your Indicators</legend>
+    <label for="height">Height:</label>
+    <label for="height" class="front">Short</label>
+    <input type="range" id="height" name="height" min="0" max="10">
+    <label for="height" class="end">Tall</label><br><br>
+    <label for="salary">Salary:</label>
+    <label for="salary" class="front" id="poor">Poor</label>
+    <input type="range" id="salary" name="height" min="0" max="10">
+    <label for="salary" class="end">Rich</label><br>
+</fieldset>
+<br>
+<fieldset>
+    <legend class="legend" >Your Contact Information</legend>
+    <label for="email">Email:  </label>
+    <input type="email" id="email" name="email"><br>
+    <label for="phone">Mobile:</label>
+    <input type="tel" id="phone" name="phone"><br>
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" rows="4" cols="50">
+    </textarea><br>
+    <label for="check1">Method to contact you:</label>
+    <input type="checkbox" id="check1" value="email">Email
+    <input type="checkbox" id="check2" value="whatsapp">Whatsapp
+    <input type="checkbox" id="check3" value="inapp">In-app chat
+</fieldset><br>
+<input type="submit" class="submit" value="Submit!">
+<hr>
+</div>
+</body>
+</html>
