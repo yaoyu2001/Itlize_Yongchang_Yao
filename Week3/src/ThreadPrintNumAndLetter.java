@@ -40,6 +40,7 @@ public class ThreadPrintNumAndLetter {
         try {
             for (int i=0;i<26;i++){
                 System.out.print((char)(i+'A'));
+                System.out.print(' ');
                 num.signal();
                 zimu.await();
             }

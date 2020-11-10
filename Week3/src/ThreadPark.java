@@ -1,4 +1,4 @@
-// Parking cars
+// Parking cars class
 class Park implements Runnable{ //Park class
     private ThreadPark pl;
     public Park(ThreadPark pl){
@@ -6,18 +6,20 @@ class Park implements Runnable{ //Park class
     }
     @Override
     public void run() {
-
-        while(true){
+        int count = 0;
+        while(count < 11){
             try {
                 Thread.sleep(1000);//Time out to indicate
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             pl.park();
+            count++;
         }
+
     }
 }
-
+// Drive away class
 class Drive implements Runnable{//Drive away class
     private ThreadPark pl;
     public Drive(ThreadPark pl){
@@ -25,14 +27,15 @@ class Drive implements Runnable{//Drive away class
     }
     @Override
     public void run() {
-
-        while(true){
+        int count = 0;
+        while(count < 11){
             try {
                 Thread.sleep(1000);//Time out to indicate
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             pl.drive();
+            count++;
         }
     }
 }
@@ -43,21 +46,21 @@ public class ThreadPark {
 
     // If
     private boolean isFull(){
-        int e=0;
+        int pos=0;
         for(int i=0;i<3;i++){
             if(!sites[i])
-                e++;
+                pos++;
         }
-        return e==3;
+        return pos==3;
     }
 
     private boolean isEmpty(){
-        int e=0;
+        int pos=0;
         for (int i = 0; i < 3; i++) {
             if(sites[i])
-                e++;
+                pos++;
         }
-        return e==3;
+        return pos==3;
     }
 
     private int whichIsEmpty(){

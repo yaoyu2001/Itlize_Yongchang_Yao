@@ -42,7 +42,7 @@ class PrintLetter {
                 e.printStackTrace();
             }
         }
-        System.out.print("C");
+        System.out.print("C ");
         should_a = true;
         should_b = false;
         should_c = false;
