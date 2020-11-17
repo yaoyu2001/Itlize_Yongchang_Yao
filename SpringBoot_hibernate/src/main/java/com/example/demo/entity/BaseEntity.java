@@ -3,11 +3,7 @@ package com.example.demo.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 
 
 //@MappedSuperclass标识的类不能再有@Entity和@Table注解。
