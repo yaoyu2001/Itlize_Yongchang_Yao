@@ -12,7 +12,7 @@ public class CreateStudentDemo {
 	public static void main(String[] args) {
 
 		// create session factory
-		SessionFactory factory = new Configuration()
+		SessionFactory factory = new Configuration()// Configuration instance
 								.configure("/main/hibernate.cfg.xml")
 								.addAnnotatedClass(Student.class)
 								.buildSessionFactory();

@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 
 @Service
-@Transactional
+@Transactional // Guarantee all manipulates all completed
 public class UserServiceImpl implements UserService{
 
     @Autowired
