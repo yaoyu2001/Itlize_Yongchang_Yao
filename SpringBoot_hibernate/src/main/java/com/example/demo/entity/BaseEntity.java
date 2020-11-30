@@ -6,7 +6,6 @@ import java.util.Date;
 import javax.persistence.*;
 
 
-//@MappedSuperclass标识的类不能再有@Entity和@Table注解。
 @MappedSuperclass
 public class BaseEntity implements Serializable{
 
@@ -27,10 +26,10 @@ public class BaseEntity implements Serializable{
     @Column(name = "status")
     private String status;
 
-    @Column(name = "createDate")
+    @Column(name = "createDate", updatable = false, nullable = false)
     private String createDate;
 
-    @Column(name = "updateDate")
+    @Column(name = "updateDate", nullable = false)
     private Date updateDate;
 
     public Long getId() {

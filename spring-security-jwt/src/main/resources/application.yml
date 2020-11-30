@@ -15,4 +15,5 @@ spring:
       hibernate:
         format_sql: false
         globally_quoted_identifiers: true
-
+server:
+  port: 8081
