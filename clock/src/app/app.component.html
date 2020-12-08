@@ -17,9 +17,12 @@
 <div><button type="button" (click)="clearSearch()">Reset</button></div>
 <div>
 <label>
-  <input name="username1" [(ngModel)]="username">
+  <input name="hour" [(ngModel)]="hour">
+  <input name="min" [(ngModel)]="min">
+  <input name="second" [(ngModel)]="second">
   <br>
-  {{username}}
+  <p> {{hour}} :  {{min}} :  {{second}}</p>
+<!--  {{second}}-->
 </label>
 </div>
 

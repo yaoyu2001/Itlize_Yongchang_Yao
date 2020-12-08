@@ -10,7 +10,10 @@ export class AppComponent implements OnInit{
   title = 'clock';
   today: Date;
   name = '';
-  username: string;
+  hour: number;
+  min: number;
+  second: number;
+  type: string;
 
   constructor() {}
 
@@ -19,16 +22,21 @@ export class AppComponent implements OnInit{
     this.today = new Date();
     setInterval(() => {
       this.today = new Date();
+      this.hour = this.today.getHours();
+      this.min = this.today.getMinutes();
+      this.second = this.today.getSeconds();
     }, 1000);
   }
-  // tslint:disable-next-line:typedef
-  setValue() {
-    this.name = 'Nancy';
-  }
+
+  // setTime(){
+  //   this.ngOnInit()
+  // }
 
   // tslint:disable-next-line:typedef
   clearSearch() {
-    this.username = null;
+    this.hour = null;
+    this.min = null;
+    this.second = null;
   }
 
 }
