@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Directive, OnInit} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent implements OnInit{
   title = 'clock';
   today: Date;
@@ -14,29 +15,40 @@ export class AppComponent implements OnInit{
   min: number;
   second: number;
   type: string;
+  // interval: number;
+
+  interval = setInterval(() => {
+    this.today = new Date();
+    this.hour = this.today.getHours();
+    this.min = this.today.getMinutes();
+    this.second = this.today.getSeconds();
+  }, 1000);
 
   constructor() {}
 
   ngOnInit(): void {
     // this.timeObservable$ = interval(1000);
-    this.today = new Date();
-    setInterval(() => {
+    // @ts-ignore
+    this.interval();
+  }
+  // tslint:disable-next-line:typedef
+  clearSearch() {
+    // @ts-ignore
+    this.interval = setInterval(() => {
       this.today = new Date();
       this.hour = this.today.getHours();
       this.min = this.today.getMinutes();
       this.second = this.today.getSeconds();
     }, 1000);
+    // clearInterval(this.interval);
   }
-
-  // setTime(){
-  //   this.ngOnInit()
-  // }
 
   // tslint:disable-next-line:typedef
-  clearSearch() {
-    this.hour = null;
-    this.min = null;
-    this.second = null;
+  typeSearch() {
+    clearInterval(this.interval);
   }
-
 }
+
+// @Directive({
+//   selector : 'input['
+// })
