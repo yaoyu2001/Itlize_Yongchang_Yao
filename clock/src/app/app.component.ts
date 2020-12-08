@@ -25,4 +25,10 @@ export class AppComponent implements OnInit{
   setValue() {
     this.name = 'Nancy';
   }
+
+  // tslint:disable-next-line:typedef
+  clearSearch() {
+    this.username = null;
+  }
+
 }
