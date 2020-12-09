@@ -1,0 +1,20 @@
+form {
+  /*background-color: #fdfee5;*/
+  /*border-color: #010103;*/
+  /*border-width:5px;*/
+  /*border-style: solid;*/
+  /*padding-left: 100px;*/
+  margin-left: 400px;
+  margin-right: 400px;
+  /*border-bottom: 10px;*/
+}
+
+table tr.highlight {
+  background-color: rgba(133, 0, 175, 0.61) !important;
+  color: #ffffff;
+}
+
+.table-striped tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: rgba(133, 0, 175, 0.61) !important;
+  color: #ffffff;
+}

@@ -1,42 +1,43 @@
-<fieldset>
-  <div>
-    <label>London Time</label>
-  </div>
+<!--<fieldset>-->
+<!--  <div>-->
+<!--    <label>London Time</label>-->
+<!--  </div>-->
 
-  <div>
-<div class="time">
-  <p (click)="clearSearch()">{{today | date:'hh:mm:ss a'}}</p>
-</div>
-  </div>
-
-
-<!--<div class="date">-->
-<!--  <p>{{today | date}}</p>-->
+<!--  <div>-->
+<!--<div class="time">-->
+<!--  <p (click)="clearSearch()">{{today | date:'hh:mm:ss a'}}</p>-->
 <!--</div>-->
-  <div>
-    <label>
-      <input name="hour" [(ngModel)]="hour">
-      <input name="min" [(ngModel)]="min">
-      <input name="second" [(ngModel)]="second">
-      <br>
-      <p (click)="typeSearch()"> {{hour}} :  {{min}} :  {{second}}</p>
-      <!--  {{second}}-->
-    </label>
-  </div>
-</fieldset>
-<div>
-  <button type="button" (click)="clearSearch()">Reset</button>
-  <button type="button" (click)="typeSearch()">Pause</button>
-</div>
-<div>
-<label>
-  <input name="hour" [(ngModel)]="hour">
-  <input name="min" [(ngModel)]="min">
-  <input name="second" [(ngModel)]="second">
-  <br>
-  <p> {{hour}} :  {{min}} :  {{second}}</p>
-<!--  {{second}}-->
-</label>
-</div>
+<!--  </div>-->
+
+
+<!--&lt;!&ndash;<div class="date">&ndash;&gt;-->
+<!--&lt;!&ndash;  <p>{{today | date}}</p>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--  <div>-->
+<!--    <label>-->
+<!--      <input name="hour" [(ngModel)]="hour">-->
+<!--      <input name="min" [(ngModel)]="min">-->
+<!--      <input name="second" [(ngModel)]="second">-->
+<!--      <br>-->
+<!--      <p (click)="typeSearch()"> {{hour}} :  {{min}} :  {{second}}</p>-->
+<!--      &lt;!&ndash;  {{second}}&ndash;&gt;-->
+<!--    </label>-->
+<!--  </div>-->
+<!--</fieldset>-->
+<!--<div>-->
+<!--  <button type="button" (click)="clearSearch()">Reset</button>-->
+<!--  <button type="button" (click)="typeSearch()">Pause</button>-->
+<!--</div>-->
+<!--<div>-->
+<!--<label>-->
+<!--  <input name="hour" [(ngModel)]="hour">-->
+<!--  <input name="min" [(ngModel)]="min">-->
+<!--  <input name="second" [(ngModel)]="second">-->
+<!--  <br>-->
+<!--  <p> {{hour}} :  {{min}} :  {{second}}</p>-->
+<!--&lt;!&ndash;  {{second}}&ndash;&gt;-->
+<!--</label>-->
+<!--</div>-->
+<app-todolist></app-todolist>
 
 
